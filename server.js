@@ -6,11 +6,16 @@ app.use(express.urlencoded({ extended: true }));
 
 // MySQL 데이터베이스 연결 설정
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '12345678',
-    database: 'attendance2'
+    host: 'db.camdqnnyqjvmqdkitxvt.supabase.co', 
+    user: 'postgres',                 
+    password: 'rkdtnsgml1!', // ⬅️ 직접 정하신 비밀번호 입력
+    database: 'postgres',             
+    port: 5432                                // ⬅️ 6543에서 5432로 변경!
 });
+
+
+
+
 
 // 웹페이지 화면 보여주기
 app.get('/', (req, res) => {
