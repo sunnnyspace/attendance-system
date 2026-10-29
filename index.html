@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>출석 입력 시스템</title>
+</head>
+<body>
+    <h2>출석 정보 입력</h2>
+    <!-- 서버로 데이터를 보내는 양식(Form)입니다 -->
+    <form action="/submit" method="POST">
+        <label>이름: <input type="text" name="name" required></label><br><br>
+        <label>학번: <input type="text" name="student_id" required></label><br><br>
+        <label>날짜: <input type="date" name="attendance_date" required></label><br><br>
+        <label>출석 정보: 
+            <select name="status">
+                <option value="출석">출석</option>
+                <option value="지각">지각</option>
+                <option value="공가">공가</option>
+                <option value="결석">결석</option>
+            </select>
+        </label><br><br>
+        <button type="submit">제출하기</button>
+    </form>
+</body>
+</html>
